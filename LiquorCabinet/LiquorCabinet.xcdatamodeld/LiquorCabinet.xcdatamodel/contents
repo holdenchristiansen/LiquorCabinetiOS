@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Cabinet" representedClassName="Cabinet">
+        <attribute name="dirty" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="version" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DrinkIngredient" inverseName="cabinets" inverseEntity="DrinkIngredient">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
+    </entity>
+    <entity name="DrinkCategory" representedClassName="DrinkCategory">
+        <attribute name="name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="drinks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DrinkRecipe" inverseName="categories" inverseEntity="DrinkRecipe">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
+    </entity>
+    <entity name="DrinkGarnish" representedClassName="DrinkGarnish" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="drinks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DrinkRecipe" inverseName="garnishes" inverseEntity="DrinkRecipe" syncable="YES"/>
+    </entity>
+    <entity name="DrinkGlass" representedClassName="DrinkGlass">
+        <attribute name="name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="drinks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DrinkRecipe" inverseName="glass" inverseEntity="DrinkRecipe">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
+    </entity>
+    <entity name="DrinkIngredient" representedClassName="DrinkIngredient">
+        <attribute name="name" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="optionalAssetName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="scratchedOffShoppingCart" optional="YES" attributeType="Boolean">
+            <userInfo/>
+        </attribute>
+        <attribute name="secondaryName" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="shoppingCart" optional="YES" attributeType="Boolean">
+            <userInfo/>
+        </attribute>
+        <attribute name="type" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="cabinets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cabinet" inverseName="ingredients" inverseEntity="Cabinet">
+            <userInfo/>
+        </relationship>
+        <relationship name="drinks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DrinkRecipe" inverseName="ingredients" inverseEntity="DrinkRecipe">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
+    </entity>
+    <entity name="DrinkRecipe" representedClassName="DrinkRecipe">
+        <attribute name="alcoholic" optional="YES" attributeType="Boolean">
+            <userInfo/>
+        </attribute>
+        <attribute name="drinkID" attributeType="Integer 32" defaultValueString="0" indexed="YES">
+            <userInfo/>
+        </attribute>
+        <attribute name="favorite" optional="YES" attributeType="Boolean">
+            <userInfo/>
+        </attribute>
+        <attribute name="information" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="instructions" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="isSuggested" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="notes" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DrinkCategory" inverseName="drinks" inverseEntity="DrinkCategory">
+            <userInfo/>
+        </relationship>
+        <relationship name="garnishes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DrinkGarnish" inverseName="drinks" inverseEntity="DrinkGarnish" syncable="YES"/>
+        <relationship name="glass" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DrinkGlass" inverseName="drinks" inverseEntity="DrinkGlass">
+            <userInfo/>
+        </relationship>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DrinkIngredient" inverseName="drinks" inverseEntity="DrinkIngredient">
+            <userInfo/>
+        </relationship>
+        <relationship name="similarDrinks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DrinkRecipe" inverseName="similarDrinks" inverseEntity="DrinkRecipe" syncable="YES"/>
+        <relationship name="steps" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RecipeStep" inverseName="recipe" inverseEntity="RecipeStep">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
+    </entity>
+    <entity name="RecipeStep" representedClassName="RecipeStep">
+        <attribute name="stepAmount" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="stepIndex" optional="YES" attributeType="Integer 16" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <attribute name="stepTitle" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="recipe" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DrinkRecipe" inverseName="steps" inverseEntity="DrinkRecipe">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
+    </entity>
+    <elements>
+        <element name="Cabinet" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="DrinkCategory" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="DrinkGarnish" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="DrinkGlass" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="DrinkIngredient" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="DrinkRecipe" positionX="160" positionY="192" width="128" height="255"/>
+        <element name="RecipeStep" positionX="160" positionY="192" width="128" height="105"/>
+    </elements>
+</model>

@@ -1,0 +1,28 @@
+//
+//  DrinkGarnish.h
+//  LiquorCabinet
+//
+//  Created by Mark Powell on 10/26/11.
+//  Copyright (c) 2011 Lavacado Studios, LLC. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+
+@class DrinkRecipe;
+
+@interface DrinkGarnish : NSManagedObject
+
+@property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSSet *drinks;
+@end
+
+@interface DrinkGarnish (CoreDataGeneratedAccessors)
+
++ (DrinkGarnish *)drinkGarnishWithName:(NSString *)name inContext:(NSManagedObjectContext *)context;
+
+- (void)addDrinksObject:(DrinkRecipe *)value;
+- (void)removeDrinksObject:(DrinkRecipe *)value;
+- (void)addDrinks:(NSSet *)values;
+- (void)removeDrinks:(NSSet *)values;
+@end

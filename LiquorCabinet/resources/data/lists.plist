@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>dateModified</key>
+	<date>2012-11-02T21:19:02Z</date>
+	<key>lists</key>
+	<array>
+		<dict>
+			<key>drink_ids</key>
+			<array>
+				<integer>987</integer>
+				<integer>988</integer>
+				<integer>417</integer>
+				<integer>598</integer>
+				<integer>839</integer>
+				<integer>889</integer>
+				<integer>913</integer>
+				<integer>946</integer>
+				<integer>179</integer>
+				<integer>990</integer>
+			</array>
+			<key>name</key>
+			<string>Drinks for the Holidays</string>
+		</dict>
+		<dict>
+			<key>drink_ids</key>
+			<array>
+				<integer>860</integer>
+				<integer>523</integer>
+				<integer>587</integer>
+				<integer>955</integer>
+				<integer>713</integer>
+				<integer>894</integer>
+				<integer>991</integer>
+				<integer>606</integer>
+				<integer>529</integer>
+				<integer>339</integer>
+				<integer>736</integer>
+			</array>
+			<key>name</key>
+			<string>Drinks for a Gentleman</string>
+		</dict>
+		<dict>
+			<key>drink_ids</key>
+			<array>
+				<integer>928</integer>
+				<integer>255</integer>
+				<integer>529</integer>
+				<integer>917</integer>
+				<integer>219</integer>
+				<integer>875</integer>
+				<integer>866</integer>
+				<integer>891</integer>
+				<integer>913</integer>
+				<integer>669</integer>
+				<integer>694</integer>
+			</array>
+			<key>name</key>
+			<string>Drinks for a Lady</string>
+		</dict>
+		<dict>
+			<key>drink_ids</key>
+			<array>
+				<integer>150</integer>
+				<integer>385</integer>
+				<integer>565</integer>
+				<integer>666</integer>
+				<integer>913</integer>
+				<integer>833</integer>
+				<integer>953</integer>
+				<integer>725</integer>
+				<integer>557</integer>
+				<integer>401</integer>
+				<integer>397</integer>
+			</array>
+			<key>name</key>
+			<string>Drinks for Brunch</string>
+		</dict>
+		<dict>
+			<key>drink_ids</key>
+			<array>
+				<integer>105</integer>
+				<integer>295</integer>
+				<integer>632</integer>
+				<integer>644</integer>
+				<integer>966</integer>
+				<integer>421</integer>
+				<integer>256</integer>
+				<integer>268</integer>
+				<integer>948</integer>
+				<integer>518</integer>
+			</array>
+			<key>name</key>
+			<string>Cocktails by the Pool</string>
+		</dict>
+	</array>
+</dict>
+</plist>
